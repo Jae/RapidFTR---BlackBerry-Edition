@@ -10,8 +10,8 @@
         <url>http://dev.rapidftr.com:3000/sessions.json</url>
       </urls>
       <inputs>
-        <key id="user_name" type="xs:string" paramType="variable" required="true" />
-        <key id="password" type="xs:string" paramType="variable" required="true" />
+        <value id="user_name" type="xs:string" paramType="variable" required="true" />
+        <value id="password" type="xs:string" paramType="variable" required="true" />
       </inputs>
       <execute>
 <![CDATA[
