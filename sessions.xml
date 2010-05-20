@@ -16,7 +16,7 @@
       <execute>
 <![CDATA[
 
-response.object = request.post("user_name=" + inputs["user_name"] + "&password=" + inputs["password"]);
+response.object = request.post("user_name=" + inputs["user_name"] + "&password=" + inputs["password"]).response;
 
 ]]>
       </execute>
