@@ -15,12 +15,9 @@
       <execute>
 <![CDATA[
 var newSessionRequest = request.post(inputs["session"]);
-var session = newSessionRequest.response;
-response.object = {
-  response : session,
-  headers : newSessionRequest.headers,
-  status : newSessionRequest.status
-};
+response.object = newSessionRequest.response;
+response.headers = newSessionRequest.headers;
+response.status = newSessionRequest.status;
 ]]>
       </execute>
     </insert>
