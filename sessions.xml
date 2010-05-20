@@ -14,10 +14,7 @@
       </inputs>
       <execute>
 <![CDATA[
-var newSessionRequest = request.post(inputs["session"]);
-response.object = newSessionRequest.response;
-response.headers = newSessionRequest.headers;
-response.status = newSessionRequest.status;
+response.object = request.post(inputs["session"]).response;
 ]]>
       </execute>
     </insert>
