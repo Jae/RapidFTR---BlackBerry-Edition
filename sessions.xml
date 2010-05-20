@@ -14,9 +14,13 @@
       </inputs>
       <execute>
 <![CDATA[
-
-response = request.post(inputs["session"]);
-
+var session = request.post(inputs["session"]);
+session.response;
+response.object = {
+  response : session.respone,
+  headers : session.headers,
+  status : session.status
+};
 ]]>
       </execute>
     </insert>
