@@ -15,7 +15,7 @@
       <execute>
 <![CDATA[
 
-response.object = request.post(inputs["session"]).response;
+response = request.post(inputs["session"]);
 
 ]]>
       </execute>
