@@ -15,7 +15,13 @@
       </inputs>
       <execute>
 <![CDATA[
-response.object = request.post("user_name=" + inputs["user_name"] + "&password=" + inputs["password"]).response;
+var session = request.post("user_name=" + inputs["user_name"] + "&password=" + inputs["password"]).response;
+response.object = {
+  response : session,
+  status : session.status,
+  headers : session.headers
+};
+
 ]]>
       </execute>
     </insert>
