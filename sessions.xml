@@ -10,12 +10,13 @@
         <url>http://dev.rapidftr.com:3000/sessions.json</url>
       </urls>
       <inputs>
-        <value id="user_name" type="xs:string" paramType="variable" required="true" />
-        <value id="password" type="xs:string" paramType="variable" required="true" />
+        <value id="session" type="xs:string" paramType="variable" required="true" />
       </inputs>
       <execute>
 <![CDATA[
-response.object = request.post("user_name=" + inputs["user_name"] + "&password=" + inputs["password"]).response;
+
+response.object = request.post(inputs["session"]).response;
+
 ]]>
       </execute>
     </insert>
