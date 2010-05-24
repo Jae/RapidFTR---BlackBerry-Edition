@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+MIDlet-Version: 1
+MIDlet-Jar-Size: 243279
+RIM-COD-URL-3: PhoneGapBB-3.cod
+RIM-COD-SHA1-3: 51 f8 85 c0 ae 38 4a fc c1 59 48 9d b7 49 5e 04 05 d7 bd 7b
+RIM-COD-URL-2: PhoneGapBB-2.cod
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Jar-URL: phonegap.jar
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_os,net_rim_bbapi_invoke,net_rim_bb_browser_field_api,net_rim_pdap,net_rim_locationapi
+RIM-COD-SHA1-2: ed 40 32 3f 75 7e 2b b1 54 0f 54 af c4 e6 30 42 eb 15 2b 17
+RIM-COD-URL-1: PhoneGapBB-1.cod
+RIM-COD-SHA1-1: f3 26 b9 db f3 ae b5 af 92 39 a6 db fe 60 b2 76 27 cf 28 df
+RIM-COD-Size-3: 54760
+RIM-COD-Size-2: 48152
+RIM-MIDlet-Flags-1: 0
+RIM-COD-Size-1: 51404
+RIM-COD-Module-Name: PhoneGapBB
+MIDlet-Name: phonegap
+RIM-COD-Size: 43868
+RIM-COD-Creation-Time: 1274715400
+MIDlet-1: ,,
+RIM-COD-URL: PhoneGapBB.cod
+RIM-COD-SHA1: 61 26 45 b3 94 a3 e2 48 e5 9d 17 fc 03 5e d4 5f 89 50 d8 13
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Vendor: jae

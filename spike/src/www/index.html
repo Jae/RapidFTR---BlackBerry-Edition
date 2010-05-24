@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=480; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+    <link rel="stylesheet" href="stylesheets/core.css" type="text/css" media="screen">
+    <script type="text/javascript" src="javascripts/phonegap.js"></script>
+    <script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
+    <script language="javascript" type="text/javascript">                    
+      $(function() {
+        function toQueryString(obj) {
+          var parts = [];
+          for(var each in obj) {
+            if(obj.hasOwnProperty(each)) {  
+              parts.push(encodeURIComponent(each) + '=' + encodeURIComponent(obj[each]));
+            }  
+          }
+          return parts.join('&');
+        };
+        
+        $("form").submit(function(event) {  
+          event.preventDefault();
+  
+          var newSession = "http://query.yahooapis.com/v1/public/yql?" + toQueryString({
+            q : 'use "http://github.com/Jae/RapidFTR---BlackBerry-Edition/raw/master/sessions.xml";insert into sessions(session) values("' + $(this).serialize() + '");',
+            format : "json"
+          });
+          
+          $.ajax({
+            type : "get",
+            url : newSession,
+            dataType : "jsonp",
+            success : function(data) {
+              var session = data.query.results.session;
+              if(session) {
+                 window.location.replace("data:///www/session.html?foo=bar");
+              } else {
+                alert("failed to login");
+              }
+            }
+          });
+        });
+      });        
+    </script>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="page-header">
+        <p class="brand"><a href="/"><img alt="Logo" src="images/logo.jpg" /></a></p>
+        <div class="nav">
+          <ul>
+            <li><a href="/">Logout</a></li>
+            <li><a href="/">Admin</a></li>
+            <li><a href="/">FAQ</a></li>
+            <li><a href="/">Contact</a></li>
+            <li><a href="/">About</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="page-content">
+        <h1>Login</h1>
+        <div class="content-section">
+          <p style="color: green"></p>
+          <form action="/sessions"  method="post">
+            <div style="margin:0;padding:0;display:inline">
+              <input name="authenticity_token" type="hidden" value="Pi9VLvv6AnG2C1IGfhANob9smxSPWnJTkJ2SMYtam60=" />
+            </div>        
+            <p>
+              <label for="user_name">User name</label>:<input id="user_name" name="user_name" type="text" />
+            </p>
+            <p>
+              <label for="password">Password</label>:<input id="password" name="password" type="password" />
+            </p>
+            <p>
+              <input action="Create" name="commit" type="submit" value="Log in"/>
+          </p>
+          </form>  
+        </div>
+    
+        <div class="content-aside">
+          <h2>Participate</h2>
+          <p>We are looking for experienced Ruby on Rails programmers. If you're interested in participating, please <a href="/">contact us</a></p>
+        </div>
+      </div>
+    </div> 
+  </body>
+</html>
